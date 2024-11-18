@@ -775,10 +775,8 @@ padding-right: 0;
 
 .fixed-bg {
   height: 200px;
-  background-attachment: fixed;
+  position:fixed;
   background-size: cover;
-  background-position: center;
-  background-position:50% 100%;
   z-index: 1;
 }
 #menu img{
@@ -821,6 +819,40 @@ padding-right: 0;
   width: 100%;
   position:static;
 }
+.section-pin dl{
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  animation: blur ease forwards;
+  animation-timeline: view();
+  animation-range: cover 0% cover 100%;
+  line-height: 2;
+}
+
+.section-pin dt{
+  width: 100%;
+  border-bottom: #000 2px dotted;
+  padding: 10px 0;
+  font-size: 1.1rem;
+}
+.section-pin dd{
+  width: 100%;
+  border-bottom: #000 1px solid;
+  padding: 10px 0;
+  font-size: 0.8rem;
+}
+.section-sticky {
+  height: 600px;
+}
+@keyframes blur{
+  0%{ filter: blur(0); }
+  10%{ filter: blur(0); }
+  30%{ filter: blur(0); }
+ 50%{ filter: blur(0); }
+ 70%{ filter: blur(0); }
+ 90%{ filter: blur(0); }
+100%{ filter: blur(8px); }
+}
+
 #reason {
   margin-bottom: 80px;
 }
@@ -854,6 +886,10 @@ padding-right: 0;
 }
 #reason .slide .text{
   font-size: 0.9rem;
+}
+/* company---------------------------------------- */
+#company{
+  margin-top: 190px;
 }
 .map{
   width: 90%;
