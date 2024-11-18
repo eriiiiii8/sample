@@ -127,7 +127,7 @@ $(window).scroll(function () {
   // スクロールイベント（スクロールされた際に実行）
   $(window).scroll(function () {
     // スクロール位置が700pxを超えた場合
-    if ($(this).scrollTop() > 1700) {
+    if ($(this).scrollTop() > 900) {
       // トップに戻るボタンを表示する
       pagetop.fadeIn();
 
