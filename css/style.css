@@ -755,7 +755,7 @@ display: block;
 }
 
 .slick-slide {
-padding-right: 0;
+padding-right: 60px;
 }
 
 #slick img{
@@ -886,7 +886,7 @@ padding-right: 0;
 }
 /* company---------------------------------------- */
 #company{
-  margin-top: 190px;
+  margin-top: 220px;
 }
 .map{
   width: 90%;
