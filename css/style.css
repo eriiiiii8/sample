@@ -498,7 +498,7 @@ Reason
 #reason .slide .title {
   color: #070706;
   text-shadow: 3px 4px 4px #969393;
-  background: linear-gradient(transparent 50%, #f7f306 20%);
+  background: linear-gradient(transparent 50%, #ddcfa0 30%);
   font-weight: bold;
   line-height: 1.5;
   display: block;
@@ -838,7 +838,7 @@ padding-right: 60px;
   font-size: 0.8rem;
 }
 .section-sticky {
-  height: 600px;
+  height: 100vh;
 }
 @keyframes blur{
   0%{ filter: blur(0); }
@@ -848,10 +848,6 @@ padding-right: 60px;
  70%{ filter: blur(0); }
  90%{ filter: blur(0); }
 100%{ filter: blur(0); }
-}
-
-#reason {
-  margin-bottom: 80px;
 }
 
 #reason .student {
