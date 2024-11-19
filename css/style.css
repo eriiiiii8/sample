@@ -34,13 +34,14 @@ img{
 }
 
 #header {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 #bg_video{
-  max-width: 100%;
-  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
   background-size: cover;
   background-position: center;
   margin-bottom: 180px;
