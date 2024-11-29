@@ -62,7 +62,6 @@ $(function () {
     ],
   });
 
-
   $('a[href*=#]').on('click', function (e) {
     e.preventDefault();
     $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 500, 'linear');
@@ -127,7 +126,7 @@ $(window).scroll(function () {
   // スクロールイベント（スクロールされた際に実行）
   $(window).scroll(function () {
     // スクロール位置が700pxを超えた場合
-    if ($(this).scrollTop() > 900) {
+    if ($(this).scrollTop() > 1000) {
       // トップに戻るボタンを表示する
       pagetop.fadeIn();
 
