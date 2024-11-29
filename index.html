@@ -25,16 +25,33 @@
 
 <body>
   <header id="header">
-    <h1><video id="bg_video" src="img/VIDEO.mp4" loop autoplay muted playsinline></video>
-    </h1>
-
-    <nav id="navi">
+    <h1 class="header_pc">whiskey</h1>
+    <div><video id="bg_video" src="img/VIDEO.mp4" loop autoplay muted playsinline></video>
+    </div>
+    <nav id="navi_pc">
       <ul>
         <li><a href="#menu">MENU</a></li>
         <li><a href="#concept">CONCEPT</a></li>
         <li><a href="#staff">STAFF</a></li>
         <li><a href="#news">NEWS</a></li>
-        <li><a href="#pompany">COMPANY</a></li>
+        <li><a href="#company">COMPANY</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+      <ul class="nav-sns">
+        <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+        <li><a href="https://www.facebook.com/" target="_blank">facebook</a></li>
+        <li><a href="https://www.instagram.com/" target="_blank">instagram</a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav id="navi_sp">
+      <ul>
+        <li><a href="#menu">MENU</a></li>
+        <li><a href="#concept">CONCEPT</a></li>
+        <li><a href="#staff">STAFF</a></li>
+        <li><a href="#news">NEWS</a></li>
+        <li><a href="#company">COMPANY</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
 
@@ -42,20 +59,19 @@
         <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
         <li><a href="https://www.facebook.com/" target="_blank">facebook</a></li>
         <li><a href="https://www.instagram.com/" target="_blank">instagram</a>
-          <!-- <img class="insta_icon" src="img/インスタグラムのシンプルなロゴのアイコン 1.png" alt=""> -->
         </li>
       </ul>
     </nav>
     <div class="text_pc">
-      <h2>ウイスキー</h2>
-      <h3>
-        <p>ウイスキーは</p>
+      <!-- <h2>ウイスキー</h2>
+      <h3> -->
+      <!-- <p>ウイスキーは</p>
         <p>主に大麦、ライ麦、トウモロコシなどの穀物を原料とし、
           発酵・蒸留・熟成を
           経て作られる蒸留酒です。</p>
         <p>ウイスキーには<br>スコッチ、バーボン、アイリッシュ、ジャパニーズなど、地域や原料製法によってさまざまな種類があります。</p>
-        <p>それぞれのウイスキーが持つ独特の風味や香りを楽しむことができます。</p>
-      </h3>
+        <p>それぞれのウイスキーが持つ独特の風味や香りを楽しむことができます。</p> -->
+      <!-- </h3> -->
     </div>
     <div class="text_sp">
       <h2>ウイスキー</h2>
@@ -240,7 +256,7 @@
           <dd>～新卒募集開始～</dd>
         </dl>
       </div>
-      <div id="pompany" class="wrapper section">
+      <div id="company" class="wrapper section">
         <h1 class="section_title">COMPANY</h1>
         <div class="Company_profile_text">
           <dl>
@@ -267,7 +283,7 @@
       <div class="contact_img">
         <h2 class="section_title">CONTACT</h2>
       </div>
-      <div class="content ">
+      <div class="content">
         <div class="content-info">
           <p>
             100-0001<br>
@@ -312,6 +328,35 @@
 
   <!-- /*---js---*/ -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="anime.min.js"></script>
+  <script>
+    const header = document.querySelector("header");
+    for (var i = 0; i <= 50; i++) {
+      const blocks = document.createElement("div");
+      blocks.classList.add("block");
+      header.appendChild(blocks);
+    }
+    function animateBlocks() {
+      anime({
+        targets: ".block",
+        translateX: function () {
+          return anime.random(-800, 700);
+        },
+        translateY: function () {
+          return anime.random(-500, 500);
+        },
+        scale: function () {
+          return anime.random(5, 6);
+        },
+        duration: 3000,
+        delay: anime.stagger(200),
+        complete: animateBlocks,
+      });
+    }
+
+    animateBlocks();
+  </script>
   <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
   <script src="js/slick.min.js"></script>
   <script src="js/main.js"></script>
