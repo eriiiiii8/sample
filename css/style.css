@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 html{
   font-size: 100%;
   font-family: "Bona Nova SC", serif;
@@ -29,7 +28,7 @@ img{
   color: #333;
   text-align: center;
   font-size: 2rem;
-  margin: 30px 0 ;
+  margin: 70px 0 ;
   text-shadow: #3b3737 5px 10px 15px;
 }
 
@@ -317,57 +316,51 @@ display: inline-block;
 }
 
 /* concept------------------------------------------------------------------ */
-#concept {
-  width: 100%;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center top;
-  background-image: url(..//img/コンセプト背景.jpg);
-  position: relative;
-}
-#concept img{
-  width: 48%;
-  margin: 0 auto;
-}
-
-.btns a {
-  color: black;
-  text-decoration: none;
-}
-.concept_content{
-  width: 100%;
+#concept,
+#history{
   display: flex;
-  gap: 20px;
-}
-.concept_text1{
-  width: 45%;
-  border: 3px solid #f7f5f5;
-  position: absolute;
-  bottom: 0;
-  line-height: 1.5;
-  font-size: 1.2rem;
-  padding: 0px 20px 40px;
-  background-image: radial-gradient(rgba(114, 114, 114, 1), rgba(233, 233, 233, 1));
- color: #000;
- text-shadow: #696666 1px 2px 4px;
- font-weight: bold;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  padding: 4%;
+  font-size: 1.3rem;
 }
 
-.concept_text2{
-  width: 45%;
-  border: 3px solid #f7f5f5;
-  color: #f7f5f5;
-  position: absolute;
-  right: 0;
-  line-height: 1.5;
-  font-size: 1.2rem;
-  padding: 25px 20px 40px;
-  background-image: radial-gradient(circle, rgba(255, 242, 58, 1), rgba(142, 111, 9, 1) 87%);
-  color: #000;
-  text-shadow: #fbf6f6 3px 2px 4px;
-  font-weight: bold;
+.concept_list{
+  width: 60%;
+  background: rgb(241, 239, 239);
+  padding: 70px;
+  z-index: 3;
+  margin-left: 130px;
 }
+.history_content{
+  width: 60%;
+  background: rgb(241, 239, 239);
+  padding: 70px;
+  z-index: 3;
+}
+.concept p,
+.history_list p{
+    padding: 20px;
+    text-align: center;
+  }
 
+.concept_right {
+  width: 55%;
+  margin-left: -65px;
+}
+.company_left{
+  width: 55%;
+  margin-right: -65px;
+}
+.company_left img{
+  height: 750px;
+  margin-left: 130px;
+}
+.concept_right img{
+  height: 750px;
+
+}
 #cb{
   display: none;
 }
@@ -410,7 +403,7 @@ display: inline-block;
 Reason
 -------------------------------------------*/
 #reason {
-  margin-bottom: 120px;
+  margin: 120px 0;
 }
 
 #reason .bg {
@@ -441,7 +434,7 @@ Reason
 #reason .slide .title {
   color: #070706;
   text-shadow: 3px 4px 4px #969393;
-  background: linear-gradient(transparent 50%, #ddcfa0 30%);
+  background: linear-gradient(transparent 80%, #eb801d 30%);
   font-weight: bold;
   line-height: 1.5;
   display: block;
@@ -510,8 +503,17 @@ Reason
   }
 }
 /*news-----------------------------------------------------------------------*/
+#news{
+  background-image: url(..//img/フッター.png);
+  background-position: center;
+  background-size: cover;
+  background-size:auto;
+    overflow: hidden;
+}
 .section-pin dl{
+  font-size: 1.2rem;
   display: flex;
+  font-weight: bold;
   flex-wrap: wrap;
   animation: blur ease forwards;
   animation-timeline: view();
@@ -519,11 +521,13 @@ Reason
 }
 .section-pin dt{
   width: 20%;
+  font-weight: bold;
   border-bottom: #000 1px solid;
   padding: 10px 0;
 }
 .section-pin dd{
   width: 80%;
+  font-weight: bold;
   border-bottom: #000 1px solid;
   padding: 10px 0;
 }
@@ -909,6 +913,90 @@ padding-right: 60px;
  90%{ filter: blur(0); }
 100%{ filter: blur(0); }
 }
+#concept,
+#history{
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 4%;
+}
+
+.concept_list{
+  width: 100%;
+  background: rgb(241, 239, 239);
+  padding: 50px;
+  z-index: 3;
+  margin-left: 0;
+}
+.history_content{
+  width: 100%;
+  background: rgb(241, 239, 239);
+  padding: 70px;
+  z-index: 3;
+  margin-left: 0;
+}
+.concept p,
+.history_list p{
+    padding: 20px;
+    text-align: center;
+  }
+
+.concept_right {
+  width: 100%;
+  margin-left: 0;
+}
+.company_left{
+  width: 100%;
+  margin-right: 0;
+}
+.company_left img{
+  width: 100%;
+  height: 50vh;
+  margin-left: 0;
+}
+.concept_right img{
+  width: 100%;
+  height: 50vh;
+
+}
+#cb{
+  display: none;
+}
+
+.more_btn{
+  display: block;
+  margin: 1em auto 0;
+  padding: 8px 16px;
+  border: 1px solid #999;
+  text-align: center;
+  cursor: pointer;
+}
+.more_btn:hover{
+  background: #fff;
+  color: #000;
+}
+
+#cb ~ .more_btn::before {
+  content: "続きを読む";
+}
+#cb:checked ~ .more_btn::before {
+  content: "閉じる";
+}
+
+.more_wrap{
+  display: none;
+}
+#cb:checked ~ .more_wrap{
+  display: block;
+}
+
+.concept_sec {
+  font-size: 2.4rem;
+  margin: 50px 0;
+  text-align: center;
+  text-shadow: #f7f5fa 7px 20px 5px;
+}
+
 
 #reason .student {
   text-align: center;
