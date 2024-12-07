@@ -924,14 +924,14 @@ padding-right: 60px;
 .concept_list{
   width: 100%;
   background: rgb(241, 239, 239);
-  padding: 50px;
+  padding: 10px;
   z-index: 3;
   margin-left: 0;
 }
 .history_content{
   width: 100%;
   background: rgb(241, 239, 239);
-  padding: 70px;
+  padding: 10px;
   z-index: 3;
   margin-left: 0;
 }
@@ -957,7 +957,6 @@ padding-right: 60px;
 .concept_right img{
   width: 100%;
   height: 50vh;
-
 }
 #cb{
   display: none;
